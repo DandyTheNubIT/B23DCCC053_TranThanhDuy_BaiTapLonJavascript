@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://jetstarairlines.vn/image/favicon.ico" rel="shortcut icon" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="dangki.css">
+
+    
+</head>
+<style>
+    body {
+      background-image: url('https://khoinguonsangtao.vn/wp-content/uploads/2022/10/hinh-anh-may-bay.jpg');
+    
+    }img {opacity: 0,8;}
+    </style>
+<body>
+    <div class="container" id="container">
+        <!-- Form đăng ký -->
+        <div class="form-container sign-up-container">
+            <form id="registerForm">
+                <h1>Create Account / Tạo Tài Khoản</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-whatsapp-square"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" id="regName" placeholder="Name" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit">Sign Up / Đăng kí</button>
+            </form>
+        </div>
+        <!-- Form đăng nhập -->
+        <div class="form-container sign-in-container">
+            <form id="loginForm">
+                <h1>Sign in / Đăng Nhập</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-whatsapp-square"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <a href="#">Forgot your password?</a>
+                <button type="button" onclick="login()">Sign In / Đăng Nhập</button>
+            </form>
+        </div>
+        <!-- Phần overlay cho hiệu ứng chuyển đổi -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <!-- Panel bên trái -->
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back! / Chào Mừng Trở Lại!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In / Đăng Nhập</button>
+                </div>
+                <!-- Panel bên phải -->
+                <div class="overlay-panel overlay-right">
+                    <h1>Xin chào, quý khách!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up / Đăng Kí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lấy các phần tử cần thiết từ DOM
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        // Xử lý sự kiện khi nhấn nút Sign Up
+        signUpButton.addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+        });
+
+        // Xử lý sự kiện khi nhấn nút Sign In
+        signInButton.addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+        });
+
+        // Hàm lưu thông tin người dùng vào Local Storage khi đăng ký
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn form submit mặc định
+
+            var regName = document.getElementById('regName').value;
+            var regEmail = document.getElementById('regEmail').value;
+            var regPassword = document.getElementById('regPassword').value;
+
+            // Lưu thông tin đăng ký vào Local Storage
+            localStorage.setItem('regName', regName);
+            localStorage.setItem('regEmail', regEmail);
+            localStorage.setItem('regPassword', regPassword);
+
+            alert('Đăng ký thành công! Vui lòng đăng nhập.');
+            // Sau khi đăng ký, chuyển sang form đăng nhập
+            container.classList.remove('right-panel-active'); // Đảm bảo form đăng nhập được hiển thị
+        });
+
+        // Hàm đăng nhập
+        function login() {
+            var loginEmail = document.getElementById('loginEmail').value;
+            var loginPassword = document.getElementById('loginPassword').value;
+
+            // Lấy thông tin đăng ký từ Local Storage
+            var regEmail = localStorage.getItem('regEmail');
+            var regPassword = localStorage.getItem('regPassword');
+
+            // Kiểm tra thông tin đăng nhập
+            if (loginEmail === regEmail && loginPassword === regPassword) {
+                localStorage.setItem('isLoggedIn', 'true'); // Lưu trạng thái đăng nhập
+                window.location.href = 'maybay.html'; // Chuyển hướng đến trang maybay.html sau khi đăng nhập thành công
+            } else {
+                alert('Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng thử lại.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+ul li a{
+    text-decoration: none;
+}
+.menuhead {
+    background-color: #4bacd8;
+    float: none;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuhead img {
+    display: flex;
+    margin-left: 65px;
+}
+
+.menuhead ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 24px;
+    align-items: center;
+
+}
+
+.menuhead li a {
+    color: white;
+    font-size: 17px;
+}
+
+.menuhead li button {
+    padding: 10px;
+    border-style: none;
+    border-radius: 6px;
+    font-weight: 700;
+    width: 100px;
+}
+
+#img-bgr {
+    transition: all 200ms ease 0s;
+    width: 100%;
+    height: calc(-60px + 100vh);
+    max-height: 480px;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+#img-bgr img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0px;
+}
+.table {
+    position: relative;
+    width: 1016px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+}
+
+.title  {
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+.title h2{
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    color: white;
+    text-align: center;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px;
+}
+
+.tbl1 {
+    background: rgb(242, 242, 242);
+    border-radius: 12px;
+    width: 100%;
+}
+.tbl1-item {
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: white;
+}
+.tab{
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(71, 71, 71);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 24px;
+    border-bottom: 2px solid grey;
+    padding:11px;
+    margin: 0 30px;
+}
+.tab:hover{
+    background-color: #F5F5F5;
+    border-bottom: none;
+}
+.tbl2{
+    padding: 16px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+form {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+label {
+	display: inline-block;
+	margin-top: 10px;
+	min-width: 100px;
+}
+
+input[type="text"], select {
+	padding: 5px;
+	margin-top: 5px;
+	min-width: 150px;
+}
+
+input[type="checkbox"] {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+input[type="radio"] {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+input[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+	background-color: #45a049;
+}
+.ft-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    width: 100%;
+    height: 64px;
+    padding: 0px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.ft-item{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 6px;
+    color: white;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px ;
+}
+.content h2{
+    padding: 20px 0;
+}
+.offers{
+    display: flex;
+    flex-direction: column  ;
+}
+.offer{
+    max-width: 100%;
+    display: flex;
+    flex: 1 1 0%;
+    overflow: auto !important;
+}
+.seo{
+    text-align: center;
+    display: flex;
+    padding: 10px 0;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.discount{
+    width: max-content;
+    flex-direction: row;
+    height: fit-content;
+    display: flex;
+    flex: 1 1 0%;
+}
+.discounts{
+    height: 184px;
+    text-align: center;
+    margin-right: 16px; 
+    width: 239px;
+    border-radius: 8px;
+    border: 1px solid rgb(224, 224, 224);
+    box-shadow: unset;
+    cursor: pointer;
+}
+.discounts p{
+    margin: 0 8px;
+    font-size: 14px;
+    color: #757575;
+
+}
+.discounts img{
+    width: 70px;
+    height: 59px;
+    border-radius: 3px;
+}
+.discounts button{
+    background-color: rgb(228, 81, 105);
+    color: #fff;
+    display: flex;
+    width: 120px;
+    padding: 7px;
+    justify-content: center;
+    margin-left: auto;
+    border-radius: 5px;
+    border: none;
+}
+.discounts h3{
+    margin: 10px;
+}
+.card{
+    width: 240px;
+    padding: 12px;
+    border-radius: 4px;
+}
+.card h3{
+    height: 50px;
+}
+.card1 img{
+    width: 219px;
+    height: 112px;
+    border-radius: 0.5rem;
+}
+.card-content{
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+}
+.card img{
+    height: 52px;
+    vertical-align: middle;
+    border-style: none;
+}
+.card p{
+
+    display: flex;
+    flex-direction: column;
+}
+.ban{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    background: url(https://storage.googleapis.com/goyolo-uat/images/vex-email-background.png) center center / cover no-repeat;
+    width: 1016px;
+    height: 400px;
+    position: relative;
+}
+.textbox{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    width: 335px;
+    left: 629px;
+    height: 400px;
+    padding: 44px 0px;
+}
+.textbox h2{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+.textbox p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+}
+.textbox input{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 12px;
+    width: 100%;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(184, 184, 184);
+}
+.textbox button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    width: 100%;
+    height: 40px;
+    background: rgb(13, 46, 89);
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+}
+
+#tablecontent{
+    padding: 10px 16em;
+    line-height: 34px;
+}
+table, th, td {
+    height: 50px;
+
+    border:1px solid #EEEEEE;
+    text-align: center;
+  }
+.flight-table{
+    border-collapse: inherit;
+    border-radius: 8px;
+    border: 1px solid rgb(224, 224, 224);
+    border-spacing: 0px;
+    width: 100%;
+    
+}
+.list-content{
+    padding: 10px 16em;
+}
+.list-content h2{
+    padding: 15px 0;
+}
+.item-content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.items{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 8px;
+    height: 300px;
+}
+.text-content{
+    line-height: 30px;
+    width: 50%;
+    display: flex;
+    padding: 14px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.text-content h3{
+    font-size: 25px;
+    margin: 10px 0;
+}
+.image-content{
+    width: 50%;
+}
+.tb-header{
+    background: rgb(242, 242, 242);
+    border-bottom: 0.5px solid rgb(224, 224, 224);
+    border-radius: 8px 8px 0px 0px;
+
+}
+.route{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(36, 116, 229);
+}
+.btn-book{
+    border: none;
+    background: rgb(255, 211, 51);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 18px;
+}
+.card-item{
+    border: #F5F5F5;
+}
+.ft-info{
+    border-top: 1px solid #ddd;
+    opacity: 1;
+    margin-top: 60px;
+}
+.info-header{
+    max-width: 980px;
+    margin: auto;
+}
+.info{
+    padding: 32px 0px 16px;
+    position: relative;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    zoom: 1;
+    display: block;
+    box-sizing: border-box;
+}
+.info-item{
+    display: block;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+}
+.info-list a{
+    display: block;
+    padding: 6px 0px;
+    color: rgb(20, 20, 20);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+    word-break: normal;
+}
+footer{
+    line-height: 30px;
+    background-color: #ddd  ;
+    text-align: center;
+    padding: 15px;
+}
+footer a{
+    color: rgb(118, 118, 118);
+}
+/* CSS cho phần tử khi hover */
+/* Chỉnh kích thước và hiệu ứng transition */
+.menuhead img:hover,
+.card1:hover,
+.card:hover,
+.ant-btn:hover {
+    transform: scale(1.1); /* Phóng to lên 1.1 lần kích thước ban đầu */
+}
+
+/* Đảm bảo các phần tử khác vẫn giữ nguyên kích thước */
+.menuhead img,
+.card1,
+.card,
+.ant-btn {
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+}

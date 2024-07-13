@@ -1,0 +1,113 @@
+
+.table {
+    table, th{
+    border:1px solid black;}
+border-collapse: collapse;
+background-color: rgb(228, 234, 234);
+border-radius: 15px; /* Bo tròn các góc bảng */
+            overflow: hidden; /* Ẩn phần góc tròn nếu các ô bảng tràn ra ngoài */
+}
+a{ text-decoration: none ;
+    }
+.container {
+display: flex; /* Sử dụng flexbox để căn chỉnh các bảng theo hàng ngang */
+}
+.table-wrapper {
+flex: 1; /* Chia đều không gian cho mỗi bảng */
+margin-right: 10px; /* Khoảng cách giữa các bảng */
+}
+.right{background-color: rgb(228, 233, 233);
+    width: 67%; /* Thiết lập chiều rộng cố định cho bảng */
+    margin-top: 20px; /* Thêm khoảng cách phía trên bảng để tạo khoảng trống */
+    border-collapse: separate;
+    border-spacing: 0;
+    border: px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+.email{  transform: translate(0, -21px);
+    display: flex;
+    justify-content: flex-end; /* Căn chỉnh sang phải */
+    align-items: flex-start;  /* Căn chỉnh lên trên */
+    width:100%;}
+.email1{transform: translate(0, -59px);
+    display: flex;
+    justify-content: flex-end; /* Căn chỉnh sang phải */
+    align-items: flex-start;  /* Căn chỉnh lên trên */
+    width:86%;}
+.overlayes-right {color: rgb(189, 10, 10);}
+}
+.left{  display:flex;
+    justify-content: flex-end; /* Căn chỉnh sang phải */
+    align-items: flex-start;  /* Căn chỉnh lên trên */
+    height:1px; /* Đặt chiều cao của container để căn chỉnh theo chiều dọc */
+    width:55%;
+    transform: translate(0, -105px);
+    line-height: 1,9;
+}
+.overlay-left{display: flex;
+    justify-content: flex-end; /* Căn chỉnh sang phải */
+    align-items: flex-start;  /* Căn chỉnh lên trên */
+    height:1px; /* Đặt chiều cao của container để căn chỉnh theo chiều dọc */
+    transform: translate(0, -108px);
+    line-height: 1,9;
+    width:74%;
+
+} 
+.overlays-left{display: flex;
+    justify-content: flex-end; /* Căn chỉnh sang phải */
+    align-items: flex-start;  /* Căn chỉnh lên trên */
+    height:1px; /* Đặt chiều cao của container để căn chỉnh theo chiều dọc */
+    transform: translate(0, -109px);
+    line-height: 1,9;
+    width:89%;}
+
+.overlayes-left{display: flex;
+        justify-content: flex-end; /* Căn chỉnh sang phải */
+        align-items: flex-start;  /* Căn chỉnh lên trên */
+        height:1px; /* Đặt chiều cao của container để căn chỉnh theo chiều dọc */
+        transform: translate(0, -109px);
+        line-height: 1,9;
+        width:100%;
+        color: rgb(240, 8, 8);}  
+
+.table2{background-color: rgb(228, 233, 233);
+    width: 67%; /* Thiết lập chiều rộng cố định cho bảng */
+    margin-left: 0; /* Đặt bảng lệch sang trái */
+    margin-top: 20px; /* Thêm khoảng cách phía trên bảng để tạo khoảng trống */
+    border-collapse: separate;
+    border-spacing: 0;
+    border: px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.formlabel{display: flex;
+    justify-content: flex-end; /* Căn chỉnh sang phải */
+    align-items: flex-start;  /* Căn chỉnh lên trên */
+    height:1px; /* Đặt chiều cao của container để căn chỉnh theo chiều dọc */
+    transform: translate(0, -55px);
+    width:70%;
+}
+
+.table3{background-color: rgb(228, 233, 233);
+    width: 67%; /* Thiết lập chiều rộng cố định cho bảng */
+    margin-top: 20px; /* Thêm khoảng cách phía trên bảng để tạo khoảng trống */
+    border-collapse: separate;
+    border-spacing: 0;
+    border: px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.email{
+    transform: translate(0, -97px);
+    display: flex;
+    justify-content: flex-end; /* Căn chỉnh sang phải */
+    align-items: flex-start;  /* Căn chỉnh lên trên */
+    width:82%;
+}
+.submit{  
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 5px;
+    overflow: hidden;
+  
+   }
